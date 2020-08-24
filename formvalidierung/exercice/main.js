@@ -1,9 +1,9 @@
 "use strict";
-let d = document,
-    form = d.getElementById('form'),
-    output =d.getElementById('output');
 
-    form.saveBtn.addEventListener('click', (e)=>{
-      e.preventDefault();
-      output.innerHTML = form.name.value;
-    });
+const form = document.getElementById('form'),
+      output = document.getElementById('output');
+
+form.addEventListener('submit', (Event)=>{
+  Event.preventDefault(); // Unterbricht den POST-Request
+  output.innerHTML = form.name.value;
+});

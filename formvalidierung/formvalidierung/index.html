@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="main.js" defer></script>
+  <title>Formvalidierung</title>
+  <style media="screen">
+    section{
+      width: 80%;
+      margin: 5vh auto;
+    }
+    section div{
+      margin-bottom: 2vh;
+    }
+    section div:last-of-type span{
+      color: red;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Formvalidierung</h1>
+</header>
+<main>
+  <section>
+    <form id="form" method="post">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+      </div>
+      <div>
+        <label for="email">Email Adresse</label>
+        <input type="email" name="email" id="email">
+      </div>
+      <div>
+        <label for="password">Passwort eingeben</label>
+        <input type="password" name="password" id="password">
+      </div>
+      <div>
+        <label for="passwordRpt">Passwort wiederholen</label>
+        <input type="password" name="passwordRpt" id="passwordRpt">
+      </div>
+      <div>
+        <label for="age">Dein Alter</label>
+        <input type="number" name="age">
+      </div>
+      <div>
+        <input type="radio" name="gender" value="1" id="men">
+        <label for="men">Mann</label>
+      </div>
+      <div>
+        <input type="radio" name="gender" value="2" id="woman">
+        <label for="woman">Frau</label>
+      </div>
+      <div>
+        <input type="checkbox" name="conditions" id="conditions">
+        <label for="conditions">Bestätige die AGB's um das Formular abzusenden!!</label>
+      </div>
+      <div id="errorBox">
+
+      </div>
+      <button type="submit" name="saveBtn">Absenden</button>
+    </form>
+  </section>
+</main>
+</body>
+</html>
