@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="master.css">
+    <script type="text/javascript" src="js/main.js" defer></script>
+    <title>ToDo-Liste</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand mb-0 h1" href="#">ToDo-Liste</a>
+        </nav>
+    </header>
+    <main>
+        <section id="input">
+            <div class="container">
+                <form method="post" id="form">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="ToDo-Liste" name="todo">
+                        </div>
+                        <div class="col">
+                            <select class="form-control" name="priority">
+                                <option value="0" disabled selected>Wähle die Priorität</option>
+                                <option value="1">Niedrig</option>
+                                <option value="2">Mittel</option>
+                                <option value="3">Hoch</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-dark" name="saveBtn">speichern</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="output" class="container">
+            <h2>Meine Todos</h2>
+            <ul>
+                <li>Nr.</li>
+                <li>Todo</li>
+                <li>Priority</li>
+                <li>Erledigt</li>
+                <li>Löschen</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand mb-0 h1" href="#">ToDo-Liste</a>
+        </nav>
+    </footer>
+</body></html>

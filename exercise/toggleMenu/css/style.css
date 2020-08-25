@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    position: relative;
+}
+
+header nav {
+    background-color: blue;
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    transition: left 1s ease-in-out;
+}
+
+.fadedOutMenu {
+    left: -100%;
+}
+
+header nav ul {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+header nav ul li {
+    text-align: center;
+    color: #fff;
+    padding: 8vh 0;
+    font-weight: bold;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+header nav ul li:hover {
+    background-color: darkblue;
+}
+
+#menuBurger {
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+}
+
+#menuBurger div {
+    width: 35px;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 6px 0;
+    transition: all 1s ease-out;
+}
+
+.changeBackground {
+    background-color: #4D5656 !important;
+}
+
+.rotate {
+    transform: rotate(720deg) !important;
+}
+
+@media only screen and (min-width: 576px) {
+    header nav ul {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    header nav ul li {
+        padding: 5vh 0;
+    }
+
+    #menuBurger {
+        display: none;
+    }
+}
