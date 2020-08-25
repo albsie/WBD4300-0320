@@ -14,6 +14,7 @@ body {
 
 header {
     position: relative;
+    max-width: 300px;
 }
 
 header nav {
@@ -68,18 +69,4 @@ header nav ul li:hover {
 
 .rotate {
     transform: rotate(720deg) !important;
-}
-
-@media only screen and (min-width: 576px) {
-    header nav ul {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    header nav ul li {
-        padding: 5vh 0;
-    }
-
-    #menuBurger {
-        display: none;
-    }
 }
