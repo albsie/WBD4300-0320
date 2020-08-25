@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: orange;
+    padding: 15px;
+}
+
+section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.bigImage img {
+    height: 60%;
+    transition: all 0.5s ease-in-out;
+}
+
+.images img {
+    max-height: 100px;
+}

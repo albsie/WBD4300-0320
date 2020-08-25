@@ -33,6 +33,20 @@ errors += "<span>Dieses Feld darf nur aus Zahlen bestehen</span>";
 if(form.age.value <=14 || form.age.value >= 100){
   errors += "<span>Dieses Alter ist nicht erlaubt!</span>";
 }
+if(!form.men.checked && !form.woman.checked){
+  errors += "<span>Wähle dein Geschlecht</span>";
+}
+/*
+if(form.gender.value === ''){
+  errors += "<span>Zweites Ergebnis</span>";
+}
+*/
+if(!form.conditions.checked){
+  errors += "<span>Bestätige die AGB's!!!</span>";
+}
+if(errors === ''){
+  window.location.href = "confirm.html";
+}
   errBox.innerHTML = errors;
 });
 
