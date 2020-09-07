@@ -1,58 +1,60 @@
 <!doctype html>
 <html lang="en">
-    <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="master.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="master.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
-    <title>TodoList</title>
+  <title>TodoList</title>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-dark bg-primary">
-            <a href="#" class="navbar-brand">Todo List</a>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar navbar-dark bg-primary">
+      <a href="#" class="navbar-brand">Todo List</a>
+    </nav>
+  </header>
 
-    <main class="container" id="app">
-        <h1>Todo List</h1>
-        <section class="todo-input">
-            <form method="post">
-                <div class="form-row">
-                    <div class="form-group col">
+  <main class="container" id="app">
+    <h1>Todo List</h1>
+    <section class="todo-input">
+      <form method="post">
+        <div class="form-row">
+          <div class="form-group col">
+            <label for="todoID">Mein Todo</label>
+            <input v-model="todo" type="text" class="form-control" id="todoID" placeholder="einkaufen">
+          </div>
+          <div class="form-group col">
+            <label for="priority">Priorität</label>
+            <select class="form-control" id="priority" v-model="priority">
+              <option v-for="item in priorityData" :value="item.id">{{item.name}}</option>
+            </select>
+          </div>
+          <div class="col-md-1">
+            <button type="button" class="btn btn-primary" @click="saveTodo()">Submit</button>
+          </div>
+        </div>
+      </form>
+    </section>
+    <section class="todo-output">
 
+    </section>
+  </main>
 
+  <footer>
 
-                    </div>
-                    <div class="form-group col">
+  </footer>
 
+  <script type="text/javascript" src="app.js">
 
+  </script>
+</body>
 
-                    </div>
-
-
-                    <div class="col-md-1">
-                        <button type="button" class="btn btn-primary">Submit</button>
-                    </div>
-                </div>
-            </form>
-        </section>
-        <section class="todo-output">
-
-        </section>
-    </main>
-
-    <footer>
-
-    </footer>
-
-
-
-</body></html>
+</html>
