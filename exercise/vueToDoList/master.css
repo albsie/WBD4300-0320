@@ -1,0 +1,8 @@
+main h1 {
+    margin: 20px 0;
+    color: red;
+}
+
+.todo-input button {
+    margin-top: 32px;
+}
