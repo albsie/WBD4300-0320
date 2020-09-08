@@ -1,11 +1,31 @@
+*{
+  list-style-type: none;
+}
 main h1 {
     margin: 20px 0;
     color: red;
 }
-
+#todo-output{
+  margin-top: 10vh;
+}
+#todo-output ul{
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr 2fr 2fr;
+  border-bottom: 1px solid grey;
+  padding-bottom: 2px;
+}
+#todo-output ul li{
+  align-self: center;
+}
+#todo-output ul:first-of-type{
+  border-bottom: 2px solid darkgrey;
+}
+#todo-output ul:first-of-type li{
+  font-weight: bold;
+}
 .todo-input button {
     margin-top: 32px;
 }
-.red{
-  color: red;
+.done{
+  text-decoration: line-through;
 }
