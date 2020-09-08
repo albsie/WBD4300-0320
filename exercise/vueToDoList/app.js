@@ -55,6 +55,19 @@ var app = new Vue({
       this.todos.splice(index,1);
       this.saveToLocalStorage(this.todos);
       this.renderKey++;
+    },
+    sortTodos(){
+      this.todos.sort((a,b)=>{
+        if(a.todo < b.todo){
+          return -1
+        } else if (a.todo > b.todo) {
+          return 1
+        } else{
+          return 0;
+        }
+      });
+      this.saveToLocalStorage(this.todos);
+      this.renderKey++;
     }
   },
   mounted() {
